@@ -51,6 +51,8 @@ spec:
                 container(name: 'kaniko', shell: '/busybox/sh') {
                     withEnv(['PATH+EXTRA=/busybox']) {
                         sh '''#!/busybox/sh
+                            echo "HARBOR_URL========>" $HARBOR_URL
+                            echo "BUILD_IMAGE========>" $BUILD_IMAGE
                             cd vote
                             /kaniko/executor --context `pwd` --destination $IMAGE_PUSH_DESTINATION --insecure
                         '''
