@@ -3,9 +3,9 @@ pipeline {
     stages {
 
         stage('Scan Code with Sonarqube') {
-            when {
-                changeset "**/result/**"
-            }
+           // when {
+           //     changeset "**/result/**"
+           // }
             agent {
                 kubernetes {
                     defaultContainer 'sonar-scanner'
