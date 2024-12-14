@@ -94,6 +94,7 @@ spec:
                 container(name: 'kaniko', shell: '/busybox/sh') {
                     withEnv(['PATH+EXTRA=/busybox']) {
                         sh '''#!/busybox/sh
+                            echo "Just test this file changed!!!"
                             cd result
                             /kaniko/executor --context `pwd` --destination $IMAGE_PUSH_DESTINATION --insecure
                         '''
