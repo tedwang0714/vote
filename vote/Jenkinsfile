@@ -52,8 +52,6 @@ spec:
                     withEnv(['PATH+EXTRA=/busybox']) {
                         sh '''#!/busybox/sh
                             echo "==================== test webhook ====================="
-                            echo "==================== test webhook ====================="
-
                             echo "HARBOR_URL========>" $HARBOR_URL
                             echo "BUILD_IMAGE========>" $BUILD_IMAGE
                             cd vote
